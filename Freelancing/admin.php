@@ -42,6 +42,16 @@
                     </a>
                 </li>
 
+                
+                <li>
+                    <a href="Adding.php">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Add Category</span>
+                    </a>
+                </li>
+
                 <li>
                     <a href="Categories.php">
                         <span class="icon">
@@ -50,16 +60,7 @@
                         <span class="title">Categories</span>
                     </a>
                 </li>
-
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <ion-icon name="help-outline"></ion-icon>
-                        </span>
-                        <span class="title">Help</span>
-                    </a>
-                </li>
-
+                
                 <li>
                     <a href="#">
                         <span class="icon">

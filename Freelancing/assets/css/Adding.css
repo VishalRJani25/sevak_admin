@@ -20,7 +20,6 @@
 body {
     min-height: 100vh;
     overflow-x: hidden;
-    display: flex;
 }
 
 .container {
@@ -217,11 +216,9 @@ body {
 }
 
 /* ======================= Cards ====================== */
-/* .cardBox {
+.cardBox {
     position: relative;
     width: 100%;
-    left: 320px;
-    top: 90px;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -235,15 +232,9 @@ body {
     padding: 30px;
     border-radius: 20px;
     display: flex;
-    display: inline-block;
     justify-content: space-between;
     cursor: pointer;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-}
-
-.con {
-    display: inline-block;
-    
 }
 
 .cardBox .card .numbers {
@@ -272,56 +263,6 @@ body {
 .cardBox .card:hover .cardName,
 .cardBox .card:hover .iconBx {
     color: var(--white);
-} */
-
-.card {
-    font-family: "Candara", sans-serif;
-    width: 340px;
-    overflow: hidden;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-}
-
-.card-image img {
-    width: 100%;
-    height: 160px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    object-fit: cover;
-}
-
-.profile-image img {
-    z-index: 1;
-    width: 120px;
-    height: 120px;
-    position: relative;
-    margin-top: -75px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 100px;
-    border: 10px solid #fff;
-    transition-duration: 0.4s;
-    transition-property: transform;
-}
-
-.profile-image img:hover {
-    transform: scale(1.1);
-}
-
-.card-content h3 {
-    font-size: 25px;
-    text-align: center;
-    margin: 0;
-}
-
-.card-content p {
-    font-size: 16px;
-    text-align: justify;
-    padding: 0 20px 5px 20px;
 }
 
 /* ================== Order Details List ============== */
@@ -565,4 +506,104 @@ body {
         right: 0;
         left: initial;
     }
+}
+
+/*   */
+
+section.contact-us #contact {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+section.contact-us #contact h2 {
+    text-transform: uppercase;
+    color: #1f272b;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+section.contact-us #contact input {
+    width: 30%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    outline: black;
+    border: none;
+    box-shadow: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #7a7a7a;
+    padding: 0px 15px;
+    margin-bottom: 30px;
+}
+
+section.contact-us #contact textarea {
+    width: 40%;
+    min-height: 140px;
+    max-height: 180px;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    /* outline: none; */
+    border: none;
+    box-shadow: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #7a7a7a;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+section.contact-us #contact button {
+    font-size: 13px;
+    color: #fff;
+    background-color: #01248e;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s;
+    border: none;
+    outline: none;
+}
+
+section.contact-us #contact button:hover {
+    opacity: 0.9;
+}
+
+section.contact-us .right-info {
+    background-color: #a12c2f;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+section.contact-us .right-info ul li {
+    display: inline-block;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.15);
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+section.contact-us .right-info ul li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+section.contact-us .right-info ul li h6 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+section.contact-us .right-info ul li span {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
 }

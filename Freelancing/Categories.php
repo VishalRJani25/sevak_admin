@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,9 @@
     <link rel="stylesheet" href="assets/css/categories.css">
     <title>categories</title>
 </head>
+
 <body>
-<div class="container">
+    <div class="container">
         <div class="navigation">
             <ul>
             <li>
@@ -38,21 +40,22 @@
                     </a>
                 </li>
 
+                
+                <li>
+                    <a href="Adding.php">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Add Category</span>
+                    </a>
+                </li>
+
                 <li>
                     <a href="Categories.php">
                         <span class="icon">
                             <ion-icon name="hammer-outline"></ion-icon>
                         </span>
                         <span class="title">Categories</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <ion-icon name="help-outline"></ion-icon>
-                        </span>
-                        <span class="title">Help</span>
                     </a>
                 </li>
 
@@ -105,53 +108,63 @@
             </div>
 
             <!-- ======================= Cards ================== -->
+            <?php
+$hostname ="localhost";
+$username ="root";
+$password ="";
+$database ="sevak";
+
+$conn = mysqli_connect($hostname, $username, $password, $database) or die("Not Connect");
+$dbconfig = mysqli_select_db($conn, $database);
+
+if ($dbconfig) {
+    //Connected;
+} else {
+    echo " Data base not Connected";
+}
+
+?>
+
+</div>
+</div>
+        <?php
+            $query = "SELECT * FROM categories";
+            $query_run = mysqli_query($conn, $query);
+            $checki = mysqli_num_rows($query_run) > 0;
+
+            if ($checki) {
+
+                while ($row = mysqli_fetch_array($query_run)) {
+            ?>
+        <!-- <div class="con">
             <div class="cardBox">
                 <div class="card">
                     <div>
-                        <div class="numbers">1,504</div>
-                        <div class="cardName">Daily Views</div>
+                        <div class="numbers"><?php echo $row['name'] ?></div>
+                        <div class="cardName"><?php echo $row['name'] ?></div>
                     </div>
 
                     <div class="iconBx">
                         <ion-icon name="eye-outline"></ion-icon>
                     </div>
                 </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">80</div>
-                        <div class="cardName">Workers</div>
-                    </div>
-
-                    <div class="iconBx">
-                        <ion-icon name="person-outline"></ion-icon>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">284</div>
-                        <div class="cardName">Comments</div>
-                    </div>
-
-                    <div class="iconBx">
-                        <ion-icon name="chatbubbles-outline"></ion-icon>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">$7,842</div>
-                        <div class="cardName">Earning</div>
-                    </div>
-
-                    <div class="iconBx">
-                        <ion-icon name="cash-outline"></ion-icon>
-                    </div>
-                </div>
             </div>
-        </div>
+        </div> -->
+    <?php
+
+                }
+            } else {
+                echo "Data is Not Found";
+            }
+
+
+
+
+                    ?>
+
     </div>
+    </div>
+
     <!-- =========== Scripts =========  -->
     <script src="assets/js/main.js"></script>
 
@@ -159,4 +172,5 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
