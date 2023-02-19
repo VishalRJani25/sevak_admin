@@ -25,7 +25,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="admin.php">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -34,7 +34,7 @@
                 </li>
 
                 <li>
-                    <a href="   User.php">
+                    <a href="User.php">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
@@ -43,11 +43,11 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="Categories.php">
                         <span class="icon">
-                            <ion-icon name="chatbubble-outline"></ion-icon>
+                            <ion-icon name="hammer-outline"></ion-icon>
                         </span>
-                        <span class="title">Messages</span>
+                        <span class="title">Categories</span>
                     </a>
                 </li>
 
@@ -124,11 +124,11 @@
                 <div class="card">
                     <div>
                         <div class="numbers">80</div>
-                        <div class="cardName">Sales</div>
+                        <div class="cardName">Workers</div>
                     </div>
 
                     <div class="iconBx">
-                        <ion-icon name="cart-outline"></ion-icon>
+                        <ion-icon name="person-outline"></ion-icon>
                     </div>
                 </div>
 
@@ -153,7 +153,7 @@
                         <ion-icon name="cash-outline"></ion-icon>
                     </div>
                 </div>
-            </div>
+            </div>  
 
             <!-- ================ Order Details List ================= -->
             <div class="details">
